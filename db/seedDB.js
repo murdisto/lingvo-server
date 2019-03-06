@@ -13,4 +13,7 @@ const questions = [
 
 module.exports = { questions };
 
-//mongo ds163705.mlab.com:63705/language-database -u dev2 -p 123456a
+
+//mongo ds221155.mlab.com:21155/lingvo -u dev -p football12 utils/seed-database.js
+
+//node utils/seed-database.js

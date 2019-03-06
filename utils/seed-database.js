@@ -1,9 +1,10 @@
+//node utils/seed-database.js
+
 const mongoose = require('mongoose');
 
 const { DATABASE_URL } = require('../config');
 
 const Question = require('../models/question');
-
 
 const {  questions  } = require('../db/seedDB');
 
