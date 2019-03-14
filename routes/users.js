@@ -121,17 +121,18 @@ We might want to create an extension of being able to add a new set of questions
     });
 });
 
-router.delete("/", jwtAuth, (req, res) => {
-  const id = req.user.id;
-  return User.findOneAndDelete({ _id: id })
-    .then(users => res.json(users.serialize()))
-    .catch(err => res.status(500).json({ message: "Internal server error" }));
-});
-router.delete("/purge", (req, res) => {
-  return User.deleteMany()
-    .then(() => res.sendStatus(204))
-    .catch(err => res.status(500).json({ message: "Internal server error" }));
-});
+// router.delete("/", jwtAuth, (req, res) => {
+//   const id = req.user.id;
+//   return User.findOneAndDelete({ _id: id })
+//     .then(users => res.json(users.serialize()))
+//     .catch(err => res.status(500).json({ message: "Internal server error" }));
+// });
+
+// router.delete("/purge", (req, res) => {
+//   return User.deleteMany()
+//     .then(() => res.sendStatus(204))
+//     .catch(err => res.status(500).json({ message: "Internal server error" }));
+// });
 
 router.get("/", (req, res) => {
   return User.find()
